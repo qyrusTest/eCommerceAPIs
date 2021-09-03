@@ -38,3 +38,8 @@ E-commerce REST API based on Java Spring, Spring Boot
 
           Notifies Shipment Vendor of order
 ```
+Command to run Project: mvn spring-boot:run
+
+Command to build Jar: ./mvnw clean package
+
+Command to run Jar: java -jar target/gs-rest-service-0.1.0.jar
