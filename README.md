@@ -15,7 +15,7 @@ E-commerce REST API based on Java Spring, Spring Boot
 
           View Product details
 
-/Price
+/price
   GET / - Requires: OAuth 2.0 Authentication
 
           View all Product Prices
