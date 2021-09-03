@@ -6,7 +6,9 @@ E-commerce REST API based on Java Spring, Spring Boot
 
 ```
 /TokenGenerator
-  GET / - Generate token using Email and password
+  GET / - Requires: Query Parameters: "Email" and "Password"
+  
+          Generate token using any Email and password
 
 /product
   GET / - Requires: OAuth 2.0 Authentication, Query Parameter "Product" (Only 1-3 available)
