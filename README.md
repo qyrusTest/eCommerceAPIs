@@ -40,6 +40,6 @@ E-commerce REST API based on Java Spring, Spring Boot
 ```
 Command to run Project: mvn spring-boot:run
 
-Command to build Jar: ./mvnw clean package -DskipTests
+Command to build Jar: mvnw clean package -DskipTests
 
 Command to run Jar: java -jar target/rest-service-complete-0.0.1-SNAPSHOT.jar
