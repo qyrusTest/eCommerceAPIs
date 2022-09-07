@@ -1,0 +1,553 @@
+---
+swagger: "2.0"
+info:
+  description: "Api Documentation"
+  version: "1.0"
+  title: "Api Documentation"
+  termsOfService: "urn:tos"
+  contact: {}
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0"
+host: "localhost:8080"
+basePath: "/"
+tags:
+- name: "basic-error-controller"
+  description: "Basic Error Controller"
+- name: "controller"
+  description: "Controller"
+paths:
+  /TokenGenerator:
+    get:
+      tags:
+      - "controller"
+      summary: "tokenGen"
+      operationId: "tokenGenUsingGET"
+      produces:
+      - "*/*"
+      parameters:
+      - name: "Email"
+        in: "query"
+        description: "Email"
+        required: true
+        type: "string"
+      - name: "Password"
+        in: "query"
+        description: "Password"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            type: "object"
+        "401":
+          description: "Unauthorized"
+        "403":
+          description: "Forbidden"
+        "404":
+          description: "Not Found"
+      x-swagger-router-controller: "Controller"
+  /error:
+    get:
+      tags:
+      - "basic-error-controller"
+      summary: "error"
+      operationId: "errorUsingGET"
+      produces:
+      - "*/*"
+      parameters: []
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            type: "object"
+            additionalProperties:
+              type: "object"
+              properties: {}
+        "401":
+          description: "Unauthorized"
+        "403":
+          description: "Forbidden"
+        "404":
+          description: "Not Found"
+      x-swagger-router-controller: "BasicErrorController"
+    head:
+      tags:
+      - "basic-error-controller"
+      summary: "error"
+      operationId: "errorUsingHEAD"
+      consumes:
+      - "application/json"
+      produces:
+      - "*/*"
+      parameters: []
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            type: "object"
+            additionalProperties:
+              type: "object"
+              properties: {}
+        "204":
+          description: "No Content"
+        "401":
+          description: "Unauthorized"
+        "403":
+          description: "Forbidden"
+      x-swagger-router-controller: "BasicErrorController"
+    post:
+      tags:
+      - "basic-error-controller"
+      summary: "error"
+      operationId: "errorUsingPOST"
+      consumes:
+      - "application/json"
+      produces:
+      - "*/*"
+      parameters: []
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            type: "object"
+            additionalProperties:
+              type: "object"
+              properties: {}
+        "201":
+          description: "Created"
+        "401":
+          description: "Unauthorized"
+        "403":
+          description: "Forbidden"
+        "404":
+          description: "Not Found"
+      x-swagger-router-controller: "BasicErrorController"
+    put:
+      tags:
+      - "basic-error-controller"
+      summary: "error"
+      operationId: "errorUsingPUT"
+      consumes:
+      - "application/json"
+      produces:
+      - "*/*"
+      parameters: []
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            type: "object"
+            additionalProperties:
+              type: "object"
+              properties: {}
+        "201":
+          description: "Created"
+        "401":
+          description: "Unauthorized"
+        "403":
+          description: "Forbidden"
+        "404":
+          description: "Not Found"
+      x-swagger-router-controller: "BasicErrorController"
+    delete:
+      tags:
+      - "basic-error-controller"
+      summary: "error"
+      operationId: "errorUsingDELETE"
+      produces:
+      - "*/*"
+      parameters: []
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            type: "object"
+            additionalProperties:
+              type: "object"
+              properties: {}
+        "204":
+          description: "No Content"
+        "401":
+          description: "Unauthorized"
+        "403":
+          description: "Forbidden"
+      x-swagger-router-controller: "BasicErrorController"
+    options:
+      tags:
+      - "basic-error-controller"
+      summary: "error"
+      operationId: "errorUsingOPTIONS"
+      consumes:
+      - "application/json"
+      produces:
+      - "*/*"
+      parameters: []
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            type: "object"
+            additionalProperties:
+              type: "object"
+              properties: {}
+        "204":
+          description: "No Content"
+        "401":
+          description: "Unauthorized"
+        "403":
+          description: "Forbidden"
+      x-swagger-router-controller: "BasicErrorController"
+    patch:
+      tags:
+      - "basic-error-controller"
+      summary: "error"
+      operationId: "errorUsingPATCH"
+      consumes:
+      - "application/json"
+      produces:
+      - "*/*"
+      parameters: []
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            type: "object"
+            additionalProperties:
+              type: "object"
+              properties: {}
+        "204":
+          description: "No Content"
+        "401":
+          description: "Unauthorized"
+        "403":
+          description: "Forbidden"
+      x-swagger-router-controller: "BasicErrorController"
+  /order:
+    post:
+      tags:
+      - "controller"
+      summary: "createOrder"
+      operationId: "createOrderUsingPOST"
+      consumes:
+      - "application/json"
+      produces:
+      - "*/*"
+      parameters:
+      - name: "Address"
+        in: "query"
+        description: "Address"
+        required: true
+        type: "string"
+      - name: "City"
+        in: "query"
+        description: "City"
+        required: true
+        type: "string"
+      - name: "Customer"
+        in: "query"
+        description: "Customer"
+        required: true
+        type: "string"
+      - name: "Email"
+        in: "query"
+        description: "Email"
+        required: true
+        type: "string"
+      - name: "Password"
+        in: "query"
+        description: "Password"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "product"
+        description: "product"
+        required: true
+        schema:
+          $ref: "#/definitions/Product"
+      - name: "Quantity"
+        in: "query"
+        description: "Quantity"
+        required: true
+        type: "integer"
+        format: "int32"
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            type: "object"
+        "201":
+          description: "Created"
+        "401":
+          description: "Unauthorized"
+        "403":
+          description: "Forbidden"
+        "404":
+          description: "Not Found"
+      x-swagger-router-controller: "Controller"
+  /payment:
+    post:
+      tags:
+      - "controller"
+      summary: "createPayment"
+      operationId: "createPaymentUsingPOST"
+      consumes:
+      - "application/json"
+      produces:
+      - "*/*"
+      parameters:
+      - in: "body"
+        name: "order"
+        description: "order"
+        required: true
+        schema:
+          $ref: "#/definitions/Order"
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            type: "object"
+        "201":
+          description: "Created"
+        "401":
+          description: "Unauthorized"
+        "403":
+          description: "Forbidden"
+        "404":
+          description: "Not Found"
+      x-swagger-router-controller: "Controller"
+  /price:
+    get:
+      tags:
+      - "controller"
+      summary: "index"
+      operationId: "indexUsingGET"
+      produces:
+      - "*/*"
+      parameters:
+      - name: "Authorization"
+        in: "header"
+        description: "Authorization"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            type: "object"
+        "401":
+          description: "Unauthorized"
+        "403":
+          description: "Forbidden"
+        "404":
+          description: "Not Found"
+      x-swagger-router-controller: "Controller"
+    post:
+      tags:
+      - "controller"
+      summary: "totalPrice"
+      operationId: "totalPriceUsingPOST"
+      consumes:
+      - "application/json"
+      produces:
+      - "*/*"
+      parameters:
+      - in: "body"
+        name: "product"
+        description: "product"
+        required: true
+        schema:
+          $ref: "#/definitions/Product"
+      - name: "Quantity"
+        in: "query"
+        description: "Quantity"
+        required: true
+        type: "integer"
+        format: "int32"
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            type: "object"
+        "201":
+          description: "Created"
+        "401":
+          description: "Unauthorized"
+        "403":
+          description: "Forbidden"
+        "404":
+          description: "Not Found"
+      x-swagger-router-controller: "Controller"
+  /product:
+    get:
+      tags:
+      - "controller"
+      summary: "product"
+      operationId: "productUsingGET"
+      produces:
+      - "*/*"
+      parameters:
+      - name: "Authorization"
+        in: "header"
+        description: "Authorization"
+        required: true
+        type: "string"
+      - name: "Product"
+        in: "query"
+        description: "Product"
+        required: true
+        type: "integer"
+        format: "int64"
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            type: "object"
+        "401":
+          description: "Unauthorized"
+        "403":
+          description: "Forbidden"
+        "404":
+          description: "Not Found"
+      x-swagger-router-controller: "Controller"
+  /ship:
+    post:
+      tags:
+      - "controller"
+      summary: "createShipment"
+      operationId: "createShipmentUsingPOST"
+      consumes:
+      - "application/json"
+      produces:
+      - "*/*"
+      parameters:
+      - in: "body"
+        name: "order"
+        description: "order"
+        required: true
+        schema:
+          $ref: "#/definitions/Order"
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            type: "object"
+        "201":
+          description: "Created"
+        "401":
+          description: "Unauthorized"
+        "403":
+          description: "Forbidden"
+        "404":
+          description: "Not Found"
+      x-swagger-router-controller: "Controller"
+definitions:
+  ModelAndView:
+    type: "object"
+    properties:
+      empty:
+        type: "boolean"
+      model:
+        type: "object"
+        properties: {}
+      modelMap:
+        type: "object"
+        additionalProperties:
+          type: "object"
+          properties: {}
+      reference:
+        type: "boolean"
+      status:
+        type: "string"
+        enum:
+        - "ACCEPTED"
+        - "ALREADY_REPORTED"
+        - "BAD_GATEWAY"
+        - "BAD_REQUEST"
+        - "BANDWIDTH_LIMIT_EXCEEDED"
+        - "CHECKPOINT"
+        - "CONFLICT"
+        - "CONTINUE"
+        - "CREATED"
+        - "DESTINATION_LOCKED"
+        - "EXPECTATION_FAILED"
+        - "FAILED_DEPENDENCY"
+        - "FORBIDDEN"
+        - "FOUND"
+        - "GATEWAY_TIMEOUT"
+        - "GONE"
+        - "HTTP_VERSION_NOT_SUPPORTED"
+        - "IM_USED"
+        - "INSUFFICIENT_SPACE_ON_RESOURCE"
+        - "INSUFFICIENT_STORAGE"
+        - "INTERNAL_SERVER_ERROR"
+        - "I_AM_A_TEAPOT"
+        - "LENGTH_REQUIRED"
+        - "LOCKED"
+        - "LOOP_DETECTED"
+        - "METHOD_FAILURE"
+        - "METHOD_NOT_ALLOWED"
+        - "MOVED_PERMANENTLY"
+        - "MOVED_TEMPORARILY"
+        - "MULTIPLE_CHOICES"
+        - "MULTI_STATUS"
+        - "NETWORK_AUTHENTICATION_REQUIRED"
+        - "NON_AUTHORITATIVE_INFORMATION"
+        - "NOT_ACCEPTABLE"
+        - "NOT_EXTENDED"
+        - "NOT_FOUND"
+        - "NOT_IMPLEMENTED"
+        - "NOT_MODIFIED"
+        - "NO_CONTENT"
+        - "OK"
+        - "PARTIAL_CONTENT"
+        - "PAYLOAD_TOO_LARGE"
+        - "PAYMENT_REQUIRED"
+        - "PERMANENT_REDIRECT"
+        - "PRECONDITION_FAILED"
+        - "PRECONDITION_REQUIRED"
+        - "PROCESSING"
+        - "PROXY_AUTHENTICATION_REQUIRED"
+        - "REQUESTED_RANGE_NOT_SATISFIABLE"
+        - "REQUEST_ENTITY_TOO_LARGE"
+        - "REQUEST_HEADER_FIELDS_TOO_LARGE"
+        - "REQUEST_TIMEOUT"
+        - "REQUEST_URI_TOO_LONG"
+        - "RESET_CONTENT"
+        - "SEE_OTHER"
+        - "SERVICE_UNAVAILABLE"
+        - "SWITCHING_PROTOCOLS"
+        - "TEMPORARY_REDIRECT"
+        - "TOO_EARLY"
+        - "TOO_MANY_REQUESTS"
+        - "UNAUTHORIZED"
+        - "UNAVAILABLE_FOR_LEGAL_REASONS"
+        - "UNPROCESSABLE_ENTITY"
+        - "UNSUPPORTED_MEDIA_TYPE"
+        - "UPGRADE_REQUIRED"
+        - "URI_TOO_LONG"
+        - "USE_PROXY"
+        - "VARIANT_ALSO_NEGOTIATES"
+      view:
+        $ref: "#/definitions/View"
+      viewName:
+        type: "string"
+    title: "ModelAndView"
+  Order:
+    type: "object"
+    properties:
+      productName:
+        type: "string"
+    title: "Order"
+    example:
+      productName: "productName"
+  Product:
+    type: "object"
+    title: "Product"
+  View:
+    type: "object"
+    properties:
+      contentType:
+        type: "string"
+    title: "View"
