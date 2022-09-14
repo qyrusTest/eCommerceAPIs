@@ -10,6 +10,8 @@ info:
     name: "Apache 2.0"
     url: "http://www.apache.org/licenses/LICENSE-2.0"
 host: "qyruscommerce.qyrus.com:8080"
+schemes:
+  - "http"
 basePath: "/"
 tags:
 - name: "basic-error-controller"
