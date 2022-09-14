@@ -11,6 +11,7 @@ info:
 host: qyruscommerce.qyrus.com:8080
 schemes:
   - "http"
+  - "https"
 basePath: /
 tags:
   - name: basic-error-controller
